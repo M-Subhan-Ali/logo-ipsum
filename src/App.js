@@ -12,6 +12,8 @@ import DesignDev from './Design&DevApproch/DesignDev';
 import OurStack from './OurStack/OurStack';
 import DevWork from './DevWork/DevWork';
 import FeaturedResource from './FeaturedResources/FeaturedResource';
+import Hire from './HireSection/Hire';
+import Footer from './FooterSection/Footer';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
     <OurStack/>
     <DevWork/>
     <FeaturedResource/>
+    <Hire/>
+    <Footer/>
     </>
   );
 }

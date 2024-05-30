@@ -44,7 +44,7 @@ const Customers = () => {
         {CustomerData.map((x,i)=>(
             <div className=' mx-auto' key={i}>
 
-            <SwiperSlide key={i}>
+            <SwiperSlide className='customer' key={i}>
             <div className='mx-4  '>
             <img src={x.image}></img>
             <div>

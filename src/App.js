@@ -6,6 +6,12 @@ import Services from './Services/Services';
 import CompanyTrust from './CompanyTrust/CompanyTrust';
 import Sponsors from './Sponsors/Sponsors';
 import Customers from './Customers/Customers';
+import WebsiteSCFC from './WebsiteSCFC/WebsiteSCFC';
+import BuildingSoftware from './BuildingSoftwareSection/BuildingSoftware';
+import DesignDev from './Design&DevApproch/DesignDev';
+import OurStack from './OurStack/OurStack';
+import DevWork from './DevWork/DevWork';
+import FeaturedResource from './FeaturedResources/FeaturedResource';
 
 function App() {
   return (
@@ -16,6 +22,12 @@ function App() {
     <CompanyTrust/>
     <Sponsors/>
     <Customers/>
+    <WebsiteSCFC/>
+    <BuildingSoftware/>
+    <DesignDev/>
+    <OurStack/>
+    <DevWork/>
+    <FeaturedResource/>
     </>
   );
 }

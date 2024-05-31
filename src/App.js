@@ -20,10 +20,10 @@ function App() {
     <>
     <Nav/>
     <Started/>
-    <Services/>
-    <CompanyTrust/>
+     <Services/>
+     <CompanyTrust/>
     <Sponsors/>
-    <Customers/>
+   {/* <Customers/>
     <WebsiteSCFC/>
     <BuildingSoftware/>
     <DesignDev/>
@@ -31,7 +31,7 @@ function App() {
     <DevWork/>
     <FeaturedResource/>
     <Hire/>
-    <Footer/>
+    <Footer/> */}
     </>
   );
 }

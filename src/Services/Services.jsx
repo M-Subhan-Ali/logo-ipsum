@@ -17,13 +17,13 @@ const Services = () => {
 
   return (
     <>
-      <div className="h-full service w-full lg:mt-32 border border-t-gray-300 border-b-gray-300  relative" style={{ background: 'linear-gradient(rgba(249, 249, 255, 1), rgba(249, 249, 255, 1))' }}>
+      <div className="mt-10 h-full service w-full lg:mt-32 border border-t-gray-300 border-b-gray-300  relative" style={{ background: 'linear-gradient(rgba(249, 249, 255, 1), rgba(249, 249, 255, 1))' }}>
         <div>
-          <h1 className=" text-4xl text-center text-[#1a202c] lg:pt-16 font-bold mb-16">
+          <h1 className="text-2xl lg:text-4xl text-center text-[#1a202c] pt-16 font-bold lg:mb-16">
             Services we offer
           </h1>
         </div>
-        <div className="py-4">
+        <div className="hidden lg:block py-4">
           <Swiper
             
             pagination= {{clickable:true}}
@@ -74,8 +74,59 @@ const Services = () => {
             </div>
           </div>
         </div>
+        <div className="lg:hidden py-4">
+          <Swiper
+            
+            
+            slidesPerView={1}
+            
+         
+            centeredSlides={true}
+            loop={true}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            
+          >
+            {ServicesData.map((x, i) => (
+              <SwiperSlide className="mb-8" key={i}>
+                <div
+                  className={`${
+                    activeIndex === i
+                      ? "swiper-slide-active border border-[#dd5580] rounded-md swiper"
+                      : ""
+                  }card w-64 h-[287px]   mx-auto mb-9`}
+                >
+                  <div className="w-auto  h-auto pt-[38.5px] pl-[16px] gap-5 ">
+                    <img
+                      src={x.image}
+                      className="w-[58px] h-[58px] border border-[#dd5580] rounded-full p-3 "
+                      alt={x.image}
+                    />
+                    <h1 className=" h-[25px] text-[#8c227d] text-[20px] leading-5 my-[15px] font-semibold">
+                      {x.title}
+                    </h1>
+                    <p className="py-4 h-[92px] text-[14px] text-[#4a5568] ">
+                      {x.description}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="scustom-pagination  ">
+            <p className="w-6">0{activeIndex + 1}</p>
+          </div>
+          <div className="scustom-pagination second ">
+            <p className="w-6 font-semibold">0{TotalSlides}</p>
+          </div>
+          <div className="sprogress-bar-container ">
+            <div
+              className="sprogress-bar"
+              style={{ width: `${progressPercentage}%` }}>
+            </div>
+          </div>
+        </div>
         <div>
-          <img className="absolute lg:top-[-30px] -z-10 left-[35%]" src={ellipse} alt={ellipse} />
+          <img className="absolute top-[-30px] -z-10 left-[35%]" src={ellipse} alt={ellipse} />
           <img className="absolute top-[92%] left-[8%] -z-10" src={ellipse} alt={ellipse} />
         </div>
       </div>

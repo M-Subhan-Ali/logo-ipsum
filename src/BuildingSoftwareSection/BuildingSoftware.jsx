@@ -14,29 +14,29 @@ import PinkEclipse from "../BuildingSoftwareSection/BuildingSoftwareImages/pinkE
 const BuildingSoftware = () => {
   return (
     <>
-      <div className=' mt-32'>
+      <div className='mt-10 lg:mt-32'>
         <div className='text-center '>
           <img src={line} className='mx-auto pb-5' alt="line-image" />
-          <h1 className='text-4xl leading-[55px] text-[#1a202c]'>Way of building <br></br>
+          <h1 className='text-3xl lg:text-4xl leading-[55px] text-[#1a202c]'>Way of building <br></br>
           <span className='font-bold'> Great Software </span></h1>
         </div>
-        <div className='px-[102px] pt-[95px] gap-24 flex relative'>
+        <div className='lg:px-[102px] pt-12 px-6 lg:pt-[95px] lg:gap-24 lg:flex relative'>
           <LeftSide person={Person1}/>
           <RightSide people={people}/>
-          <img src={PinkEclipse}  className='absolute top-[94.5%] left-[70%] w-[28px] -z-10' alt="eclipsePink" />
-          <img src={yellowEclipse} className='absolute left-[52.5%] w-[64.48px] top-[70px] -z-10' alt="eclipseyellow" />
+          <img src={PinkEclipse}  className='lg:block hidden absolute top-[94.5%] left-[70%] w-[28px] -z-10' alt="eclipsePink" />
+          <img src={yellowEclipse} className='lg:block hidden absolute left-[52.5%] w-[64.48px] top-[70px] -z-10' alt="eclipseyellow" />
         </div>
-        <div className='px-[102px] pt-[95px] gap-24 flex relative'>
+        <div className='lg:px-[102px] pt-12 px-6 lg:pt-[95px] lg:gap-24 lg:flex relative'>
           <RightSide people={people1}/>
-          <LeftSide className="relative" person={Person2}/>
-          <img src={PinkEclipse}  className='absolute top-[15.5%] left-[44.5%] w-[28px] -z-10' alt="eclipsePink" />
-          <img src={yellowEclipse} className='absolute left-[15.5%] w-[64.48px] top-[91%] -z-10' alt="eclipseyellow" />
+          <LeftSide  person={Person2}/>
+          <img src={PinkEclipse}  className='lg:block hidden absolute top-[15.5%] left-[44.5%] w-[28px] -z-10' alt="eclipsePink" />
+          <img src={yellowEclipse} className='lg:block hidden absolute left-[15.5%] w-[64.48px] top-[91%] -z-10' alt="eclipseyellow" />
         </div>
-        <div className='px-[102px] pt-[95px] gap-24 flex relative'>
+        <div className='lg:px-[102px] pt-12 px-6 lg:pt-[95px] lg:gap-24 lg:flex relative'>
           <LeftSide person={Person3}/>
           <RightSide people={people2}/>
-          <img src={PinkEclipse}  className='absolute top-[14.3%] left-[74%] w-[38px] -z-10' alt="eclipsePink" />
-          <img src={yellowEclipse} className='absolute left-[53%] w-[43.48px] top-[92%] -z-10' alt="eclipseyellow" />
+          <img src={PinkEclipse}  className='lg:block hidden absolute top-[14.3%] left-[74%] w-[38px] -z-10' alt="eclipsePink" />
+          <img src={yellowEclipse} className='lg:block hidden absolute left-[53%] w-[43.48px] top-[92%] -z-10' alt="eclipseyellow" />
         </div>
       </div>
     </>

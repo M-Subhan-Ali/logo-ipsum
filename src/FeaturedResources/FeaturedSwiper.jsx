@@ -1,20 +1,12 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, FreeMode } from "swiper/modules";
-import { useEffect } from "react";
-import "swiper/css";
-import "swiper/css/navigation";
-import photo from "../FeaturedResources/FeaturedResourceimages/photo.png";
 import arrow from "../FeaturedResources/FeaturedResourceimages/arrow.png";
 import { FeaturedData } from "../FeaturedResources/FeaturedData.jsx";
 
 const FeaturedSwiper = () => {
   return (
-    <div className="flex gap-[60px] overflow-hidden">
+    <div className="lg:flex lg:gap-[60px] overflow-hidden">
       {FeaturedData.map((x, i) => (
-      
-
-        <div key={i} className="w-64 h-[315px]">
+        <div key={i} className="mx-auto  w-64 pb-5 lg:pb-0 h-[315px]">
           <img
             src={x.image}
             className=" h-[175px] w-full pb-5 rounded-md"
@@ -29,7 +21,6 @@ const FeaturedSwiper = () => {
             </p>
           </div>
         </div>
-       
       ))}
     </div>
   );

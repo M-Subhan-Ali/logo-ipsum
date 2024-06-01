@@ -27,11 +27,11 @@ const OurStack = () => {
           </h1>
         </div>
         <div className="relative">
-          <ul className="text-[#1a202c] font-[400] flex gap-[60px] justify-center">
+          <ul className="text-[#1a202c] text-center  font-[400] flex flex-col lg:flex-row lg:gap-[60px] lg:justify-center">
             {menuItems.map((item) => (
               <li
                 onClick={() => On(item.name)}
-                className={`text-[18px] cursor-pointer ${
+                className={`text-[18px] cursor-pointer pb-3 lg:pb-0 ${
                   color === item.key ? "text-[#c1437e]" : ""
                 }`}
               >
@@ -41,7 +41,7 @@ const OurStack = () => {
           </ul>
           <img
             src={line}
-            className="absolute left-[315px] top-6 rounded w-6 h-1 "
+            className="absolute hidden lg:block left-[315px] top-6 rounded w-6 h-1 "
             alt="line"
           />
         </div>

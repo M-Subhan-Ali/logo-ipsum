@@ -21,12 +21,12 @@ const Sponsors = () => {
               <b>We are Working With</b>
             </h1>
           </div>
-          <div className="flex  mt-3">
+          <div className="flex xs:gap-36 m:gap-[70%] lg:gap-0  mt-3">
             <button className="left inline-block">
-              <img src={leftArrow} className="mx-16 lg:ms-28" alt="left" />
+              <img src={leftArrow} className="lg:mx-16 ps-8 md:w-auto m:w-28 lg:ms-28" alt="left" />
             </button>
             <button className="right inline-block">
-              <img src={RightArrow} className="mt-7  " alt="right" />
+              <img src={RightArrow} className="mt-7   " alt="right" />
             </button>
           </div>
         </div>
@@ -39,17 +39,26 @@ const Sponsors = () => {
         }}
       >
         <Swiper
-          slidesPerView={5}
           loop={true}
           modules={[Navigation]}
           navigation={{ nextEl: ".right", prevEl: ".left" }}
+          breakpoints={
+            {
+              0:{
+                slidesPerView:2
+              },
+              768:{
+                slidesPerView:5
+              }
+            }
+          }
         >
           {SponsorsData.map((x, i) => (
             <div key={i} className="">
               <SwiperSlide key={i}>
                 <img
                   src={x.image}
-                  className="h-[40px] lg:w-auto lg:h-auto  w-[150px]"
+                  className=" lg:w-auto lg:h-auto  "
                   alt="iamges"
                 ></img>
               </SwiperSlide>
